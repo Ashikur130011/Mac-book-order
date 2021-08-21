@@ -1,12 +1,12 @@
 .container{
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
+    
 }
 
 .image-width{
-    width: 500px;
+    width: 600px;
     margin-left: 150px;
     margin-top: 50px;
 }
@@ -27,6 +27,7 @@ h4{
 }
 button{
     font-size: 20px;
+    padding: 5px;
 }
 button:hover{
     color: white;
@@ -46,17 +47,50 @@ button:hover{
     margin-left: 4px;
 }
 
-.storage-about{
+
     
 }
-
+.price-half-width{
+    width: 50%;
+    margin-bottom: 50px;
+    
+}
 .price{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    height: 50px;
+
 }
-.input{
-    height: 25px;
+hr{
+    margin-top: 24.5px;
+    margin-bottom: -20px;
+}
+#hr-style{
+    height: 2px;
+    background: black;
+}
+.pomo-code{
+    display:flex;
+    justify-content: space-between;
+    width: 50%;
+    
+}
+.input {
+    height: 40px;
+    width: 295px;
+}
+.apply-btn{
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.apply-btn:hover{
+    background-color: green;
 }
 
 
