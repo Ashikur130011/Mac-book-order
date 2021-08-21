@@ -22,13 +22,13 @@
     padding-top: 20px;
 }
 h1{
-    font-size: 50px;
+    font-size: 40px;
 }
 p{
     font-size: 15px;
 }
 h4{
-    font-size: 25px;
+    font-size: 20px;
 }
 button{
     font-size: 16px;
@@ -55,7 +55,6 @@ button:hover{
 
 .price-half-width{
     width: 50%;
-
     
 }
 .price{
@@ -72,7 +71,7 @@ hr{
     height: 2px;
     background: black;
 }
-.pomo-code{
+.promo-code{
     display:flex;
     justify-content: space-between;
     width: 50%;
@@ -100,5 +99,5 @@ hr{
 /*---------Footer--------*/
 footer{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
 }
