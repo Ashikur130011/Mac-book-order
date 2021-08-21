@@ -125,6 +125,39 @@ function deliveryCharge(charge) {
         total.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText) + parseInt(extraMemoryCost.innerText)) + charge;
     }
     else{
+        const bestPrice = document.addEventListener('best-price');
+        const bestPriceValue = parseInt(bestPrice.innerText);
+        const totalPrice = document.getElementById('total-price');
 
+        const extraStorageCost = document.getElementById('storage-cost')
+        const extraMemoryCost = document.getElementById('memory-cost')
+
+        if(bestPrice.innerText == 1299) {
+            totalPrice.innerText = parseInt(bestPrice.innerText) + charge;
+        }
+        if(extraMemoryCost.innerText == 180){
+            const extraMemory = extraMemoryCost.innerText;
+            const memoryValue = bestPriceValue + parseInt(extraMemory);
+            totalPrice.innerText = memoryValue + charge;
+            document.getElementById('total-amount') = memoryValue + charge;
+    
+        }
+        if(extraStorageCost.innerText == 100 || extraStorageCost.innerText == 180){
+            totalPrice.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText)) + charge;
+            const total = document.getElementById('total-amount');
+            total.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText)) + charge;
+        }
+        if(bestPrice.innerText == 1299 && extraMemoryCost.innerText == 180 && extraStorageCost.innerText == 100) {
+            totalPrice.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText) + parseInt(extraMemoryCost.innerText)) + charge;
+    
+            const total = document.getElementById('total-amount');
+            total.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText) + parseInt(extraMemoryCost.innerText)) + charge;
+        }
+        if(bestPrice.innerText == 1299 && extraMemoryCost.innerText == 180 && extraStorageCost.innerText == 180) {
+            totalPrice.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText) + parseInt(extraMemoryCost.innerText)) + charge;
+    
+            const total = document.getElementById('total-amount');
+            total.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText) + parseInt(extraMemoryCost.innerText)) + charge;
+        }
     }
 }
