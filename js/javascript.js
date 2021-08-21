@@ -57,13 +57,6 @@ function storageVariation(storagePrice) {
 	extraStorageCost.innerText = storagePrice;
 	document.getElementById('total-amount').innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
 	const extraMemoryCost = document.getElementById('memory-cost');
-	if (extraMemoryCost.innerText == 180) {
-		const extraMemory = extraMemoryCost.innerText;
-		totalPrice.innerText = bestPriceValue + parseInt(extraMemory) + parseInt(extraMemoryCost.innerText);
-		// Total
-		const total = document.getElementById('total-amount');
-		total.innerText = bestPriceValue + parseInt(extraMemory) + parseInt(extraMemoryCost.innerText);
-	}
 	if (extraStorageCost.innerText == 100) {
 		const extraMemory = extraMemoryCost.innerText;
 		totalPrice.innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
@@ -71,7 +64,15 @@ function storageVariation(storagePrice) {
 		const total = document.getElementById('total-amount');
 		total.innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
 	}
+	if (extraMemoryCost.innerText == 180) {
+		const extraMemory = extraMemoryCost.innerText;
+		totalPrice.innerText = bestPriceValue + parseInt(extraMemoryCost.innerText) + parseInt(extraStorageCost.innerText);
+		// Total
+		const total = document.getElementById('total-amount');
+		total.innerText = bestPriceValue + parseInt(extraMemory) + parseInt(extraMemoryCost.innerText);
+	}	
 }
+
 // Delivery Cost variation
 function deliveryCharge(charge) {
 	const deliveryCharge = document.getElementById('delivery-cost');
