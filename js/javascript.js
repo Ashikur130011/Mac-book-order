@@ -55,21 +55,18 @@ function storageVariation(storagePrice) {
 	const totalPrice = document.getElementById('total-price');
 	const extraStorageCost = document.getElementById('storage-cost');
 	extraStorageCost.innerText = storagePrice;
+	totalPrice.innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
 	document.getElementById('total-amount').innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
 	const extraMemoryCost = document.getElementById('memory-cost');
-	if (extraStorageCost.innerText == 100) {
-		const extraMemory = extraMemoryCost.innerText;
-		totalPrice.innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
-		// Total
-		const total = document.getElementById('total-amount');
-		total.innerText = bestPriceValue + parseInt(extraStorageCost.innerText);
-	}
+	
+	
+	
 	if (extraMemoryCost.innerText == 180) {
 		const extraMemory = extraMemoryCost.innerText;
 		totalPrice.innerText = bestPriceValue + parseInt(extraMemoryCost.innerText) + parseInt(extraStorageCost.innerText);
 		// Total
 		const total = document.getElementById('total-amount');
-		total.innerText = bestPriceValue + parseInt(extraMemory) + parseInt(extraMemoryCost.innerText);
+		total.innerText = bestPriceValue + parseInt(extraMemoryCost.innerText) + parseInt(extraStorageCost.innerText);
 	}	
 }
 
@@ -93,6 +90,13 @@ function deliveryCharge(charge) {
 			document.getElementById('total-amount').innerText = memoryValue + charge;
 		}
 		if (extraStorageCost.innerText == 100) {
+			const extraMemory = extraMemoryCost.innerText;
+			const memoryValue = bestPriceValue + parseInt(extraMemory);
+			totalPrice.innerText = memoryValue + parseInt(extraStorageCost.innerText) + charge;
+			const total = document.getElementById('total-amount');
+			total.innerText = (bestPriceValue + parseInt(extraStorageCost.innerText)) + charge;
+		}
+		if (extraStorageCost.innerText == 180) {
 			const extraMemory = extraMemoryCost.innerText;
 			const memoryValue = bestPriceValue + parseInt(extraMemory);
 			totalPrice.innerText = memoryValue + parseInt(extraStorageCost.innerText) + charge;
